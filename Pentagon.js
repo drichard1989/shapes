@@ -2,7 +2,7 @@
 
 function Pentagon(side1, side2, side3, side4, side5){
 	if(!(this instanceof Pentagon)){
-		return new Pentagon;
+		return new Pentagon(side1, side2, side3, side4, side5);
 	}
 
 	// Now, we need to define the parameters of this to the side properties.

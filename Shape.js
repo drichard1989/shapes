@@ -1,3 +1,4 @@
+/*jslint node: true */
 'use strict';
 
 // Here we are importing the data from the other file. 
@@ -19,7 +20,7 @@ function Shape() {
 
 Shape.prototype.get_type = function(){
 	return this.__proto__.constructor;
-}
+};
 
 
 // Here, we are going to set the prototype of this object equal to new Shape(). We are also goign to updeate Triangle.prototype.constructor to equal Triangle
@@ -42,7 +43,7 @@ console.log("----------------------------------------\n");
 var trian = new Triangle(1, 2, 3);
 
 // Organizing our Consoles.
-console.log("Here is our Triangle Testing Area:")
+console.log("Here is our Triangle Testing Area:");
 
 console.log("trian instanceof Shape?");
 console.log(trian instanceof Shape);
@@ -66,7 +67,7 @@ console.log("----------------------------------------\n");
 var squat = new Square(1, 2, 3, 4);
 
 // Organizing our Consoles.
-console.log("Here is our Square Testing Area:")
+console.log("Here is our Square Testing Area:");
 
 console.log("squat instanceof Shape?");
 console.log(squat instanceof Shape);
@@ -90,7 +91,7 @@ console.log("----------------------------------------\n");
 var Pent = new Pentagon(1, 2, 3, 4, 5);
 
 // Organizing our Consoles.
-console.log("Here is our Square Testing Area:")
+console.log("Here is our Square Testing Area:");
 
 console.log("Pent instanceof Shape?");
 console.log(Pent instanceof Shape);
