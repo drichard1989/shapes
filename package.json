@@ -1,0 +1,19 @@
+{
+  "name": "shapes",
+  "version": "1.0.0",
+  "description": "This is so that the graders can have easy access to the packages.",
+  "main": "Pentagon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drichard1989/shapes.git"
+  },
+  "author": "Dylan Richard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drichard1989/shapes/issues"
+  },
+  "homepage": "https://github.com/drichard1989/shapes#readme"
+}
