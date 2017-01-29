@@ -1,5 +1,10 @@
 'use strict';
 
+// Here we are importing the data from the other file. 
+const Square = require("./square.js");
+const Triangle = require("./triangle.js");
+const Pentagon = require("./pentagon.js");
+
 // Here, we are creating the constructor named Shape.
 
 function Shape() {
@@ -9,7 +14,6 @@ function Shape() {
 	}
 }
 
-
 // Here, we are adding the get_type method to Shape.prototype.
 // This method will now be inherited by any children of Shape, including the ones we are adding specifically for the completion of this assignment. It returns the objects type.
 
@@ -17,57 +21,14 @@ Shape.prototype.get_type = function(){
 	return this.__proto__.constructor;
 }
 
-// Now, we are going to be creating a contructor for our Triangle. It will take three arguements, for the sides. Just like before, we will also be protecting this fuction against bad developers and create a conditional if statement to make sure the new keyword is used. 
-
-function Triangle(side1, side2, side3){
-	if(!(this instanceof Triangle)){
-		return new Triangle(side1, side2, side3);
-	}
-
-	// Now we need to define the parameters of this to the side properties.
-
-	this.side1 = side1;
-	this.side2 = side2;
-	this.side3 = side3;
-}
-
 
 // Here, we are going to set the prototype of this object equal to new Shape(). We are also goign to updeate Triangle.prototype.constructor to equal Triangle
 Triangle.prototype = new Shape();
 Triangle.prototype.constructor = Triangle;
 
-// Now, we are going to be creating a constructor for our Square. It will take four arguements, for the sides. Just like before we will also be protecting this function against bad developers and create a conditional if statement to make sure the new keyword is used.
-function Square (side1, side2, side3, side4){
-	if(!(this instanceof Square)){
-		return new Square(side1, side2, side3, side4);
-	}
-
-	// Now, we need to define the parameters of this to the side properties. 
-	this.side1 = side1;
-	this.side2 = side2;
-	this.side3 = side3;
-	this.side4 = side4;
-}
-
 // Here, we are going to set the prototype of this object equal to new Shape(). We are also going to update Square.prototype.constructor to equal Square.
 Square.prototype = new Shape();
 Square.prototype.constructor = Square;
-
-// Now, we are going to be creating a constructor for our Pentagon. It will take five arguements, for the sides. Just like before we will also be protecting this function against bad developers and create a conditional if statement to make sure the new keyword is used.
-
-function Pentagon(side1, side2, side3, side4, side5){
-	if(!(this instanceof Pentagon)){
-		return new Pentagon;
-	}
-
-	// Now, we need to define the parameters of this to the side properties.
-	this.side1 = side1;
-	this.side2 = side2;
-	this.side3 = side3;
-	this.side4 = side4;
-	this.side5 = side5;
-
-}
 
 // Here, we are going to set the prototype of this object equal to new Shape(). We are also going to update Pentagon.prototype.constructor to equal Pentagon.
 Pentagon.prototype = new Shape();
